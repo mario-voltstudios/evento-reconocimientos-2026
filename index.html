@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎓 Evento de Reconocimiento 2026 · Prospera + VeSeguro</title>
+<meta property="og:title" content="🎓 Evento de Reconocimiento 2026">
+<meta property="og:description" content="Queremos reconocerte a ti, a tu equipo y a tus graduados. Viernes 17 de julio · 10:00 am · Cinépolis Diana, CDMX. Confirma aquí.">
+<style>
+  :root{
+    --navy:#0e1f3d; --navy2:#16305e; --gold:#d4a437; --gold2:#f0c65e;
+    --cream:#faf6ee; --white:#ffffff; --teal:#1e8a7a; --coral:#e8604c;
+    --sky:#3b82c4; --ink:#22283a; --muted:#6b7280;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Avenir Next','Segoe UI',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;}
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px;}
+
+  /* HERO */
+  .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 70%,#1d3f7a 100%);color:var(--white);text-align:center;padding:52px 20px 100px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:var(--cream);border-radius:50% 50% 0 0 / 100% 100% 0 0;}
+  .brands{display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:22px;}
+  .brand-chip{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 16px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;}
+  .hero .cap{font-size:2.6rem;}
+  .hero h1{font-size:2rem;font-weight:800;margin:10px auto 14px;max-width:540px;}
+  .hero h1 em{font-style:normal;color:var(--gold2);}
+  .hero p.lead{max-width:520px;margin:0 auto;font-size:1.05rem;opacity:.92;}
+
+  /* EVENT CARD */
+  .event-card{background:var(--white);border-radius:20px;box-shadow:0 12px 40px rgba(14,31,61,.14);padding:28px;margin:-60px auto 0;position:relative;z-index:2;}
+  .event-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:520px){.event-grid{grid-template-columns:1fr;}}
+  .ev{display:flex;gap:12px;align-items:flex-start;}
+  .ev .ico{font-size:1.5rem;line-height:1.2;}
+  .ev b{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
+  .ev span{font-weight:600;}
+  .cal-btn{display:block;text-align:center;margin-top:20px;background:var(--navy);color:var(--white);text-decoration:none;padding:13px;border-radius:12px;font-weight:700;}
+  .cal-btn:hover{background:var(--navy2);}
+
+  section{padding:44px 0 0;}
+  h2{font-size:1.45rem;font-weight:800;color:var(--navy);text-align:center;margin-bottom:8px;}
+  .sub{text-align:center;color:var(--muted);max-width:520px;margin:0 auto 26px;}
+
+  /* RECOGNITION CARDS */
+  .rec-grid{display:grid;gap:14px;}
+  .rec{background:var(--white);border-radius:16px;padding:20px 22px;display:flex;gap:16px;align-items:flex-start;border-left:5px solid var(--gold);}
+  .rec.teal{border-left-color:var(--teal);}
+  .rec.coral{border-left-color:var(--coral);}
+  .rec .ico{font-size:1.9rem;}
+  .rec h3{font-size:1.05rem;color:var(--navy);margin-bottom:4px;}
+  .rec p{font-size:.93rem;color:#4b5563;}
+  .rec a{color:var(--sky);font-weight:600;text-decoration:none;}
+
+  /* PARKING */
+  .park{background:#eef3fa;border:1px solid #d5e2f2;border-radius:16px;padding:22px 24px;}
+  .park h3{color:var(--navy);font-size:1rem;margin-bottom:12px;}
+  .park ul{list-style:none;}
+  .park li{padding:7px 0;font-size:.93rem;display:flex;gap:10px;align-items:flex-start;border-bottom:1px dashed #d5e2f2;}
+  .park li:last-child{border-bottom:none;}
+
+  /* FORM */
+  .form-card{background:var(--white);border-radius:20px;box-shadow:0 10px 34px rgba(14,31,61,.10);padding:30px 26px;margin-top:8px;}
+  label{display:block;font-weight:700;font-size:.88rem;color:var(--navy);margin:18px 0 6px;}
+  label .req{color:var(--coral);}
+  input[type=text],input[type=tel],input[type=number],select,textarea{
+    width:100%;padding:12px 14px;border:1.5px solid #d8dce6;border-radius:10px;font-size:1rem;font-family:inherit;background:#fbfcfe;
+  }
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:520px){.row2{grid-template-columns:1fr;}}
+  .hint{font-size:.8rem;color:var(--muted);margin-top:4px;}
+  fieldset{border:none;margin-top:26px;padding-top:20px;border-top:2px solid #f0ede4;}
+  legend{font-weight:800;color:var(--navy);font-size:1.02rem;padding-top:20px;}
+  .dyn-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:10px;align-items:center;}
+  .dyn-row.grad{grid-template-columns:1.4fr 1fr auto;}
+  @media(max-width:520px){.dyn-row.grad{grid-template-columns:1fr;}}
+  .rm{background:#fceceb;color:var(--coral);border:none;border-radius:8px;width:38px;height:42px;font-size:1.1rem;cursor:pointer;}
+  .add{margin-top:12px;background:none;border:2px dashed var(--gold);color:#a07a1f;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;font-size:.9rem;width:100%;}
+  .add:hover{background:#fdf6e6;}
+  .submit{width:100%;margin-top:30px;background:linear-gradient(135deg,var(--gold),#c8952a);color:var(--navy);font-size:1.1rem;font-weight:800;border:none;border-radius:12px;padding:16px;cursor:pointer;box-shadow:0 6px 18px rgba(212,164,55,.4);}
+  .submit:hover{filter:brightness(1.05);}
+  .submit:disabled{opacity:.6;cursor:wait;}
+  .err{display:none;background:#fceceb;color:#b3402f;border-radius:10px;padding:12px 16px;margin-top:16px;font-size:.9rem;}
+
+  /* SUCCESS */
+  .success{display:none;text-align:center;background:var(--white);border-radius:20px;padding:50px 30px;margin-top:8px;box-shadow:0 10px 34px rgba(14,31,61,.10);}
+  .success .big{font-size:3.2rem;}
+  .success h2{margin:12px 0 8px;}
+
+  footer{text-align:center;padding:44px 20px 30px;color:var(--muted);font-size:.85rem;}
+  footer a{color:var(--sky);font-weight:600;text-decoration:none;}
+  .luli-badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border-radius:999px;padding:8px 18px;box-shadow:0 4px 14px rgba(14,31,61,.08);margin-bottom:14px;font-weight:700;color:var(--navy);font-size:.9rem;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="brands">
+    <span class="brand-chip">Prospera Seguros</span>
+    <span class="brand-chip">VeSeguro</span>
+    <span class="brand-chip">GNP · Luli y Gabo</span>
+  </div>
+  <div class="cap">🎓✨</div>
+  <h1>Celebremos a los que <em>más queremos</em></h1>
+  <p class="lead">Queremos reconocerte a <strong>ti</strong>, a tu <strong>equipo de apoyo</strong> y a tus <strong>pequeños y no tan pequeños</strong> que se graduaron este año — desde kínder hasta la universidad.</p>
+</header>
+
+<div class="wrap">
+  <div class="event-card">
+    <div class="event-grid">
+      <div class="ev"><div class="ico">📅</div><div><b>Fecha</b><span>Viernes 17 de julio, 2026</span></div></div>
+      <div class="ev"><div class="ico">🕙</div><div><b>Hora</b><span>10:00 am</span></div></div>
+      <div class="ev"><div class="ico">🎬</div><div><b>Lugar</b><span>Cinépolis Diana</span></div></div>
+      <div class="ev"><div class="ico">📍</div><div><b>Dirección</b><span>Av. Paseo de la Reforma 423, Col. Cuauhtémoc, CDMX</span></div></div>
+    </div>
+    <a class="cal-btn" target="_blank" rel="noopener"
+      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+de+Reconocimiento+2026+%F0%9F%8E%93&dates=20260717T160000Z/20260717T190000Z&details=Reconocimiento+a+agentes,+equipos+de+apoyo+y+graduados.+Prospera+Seguros+%2B+VeSeguro.&location=Cin%C3%A9polis+Diana,+Av.+Paseo+de+la+Reforma+423,+Cuauht%C3%A9moc,+CDMX">
+      📆 Agregar a mi calendario
+    </a>
+  </div>
+
+  <section>
+    <h2>Un evento para reconocer</h2>
+    <p class="sub">Este día es para celebrar el esfuerzo de toda tu familia — la de casa y la del trabajo.</p>
+    <div class="rec-grid">
+      <div class="rec">
+        <div class="ico">🏆</div>
+        <div><h3>A ti, agente</h3>
+        <p>Tu esfuerzo de todo el año merece un reconocimiento formal. Recibirás tu certificado personalizado el día del evento.</p></div>
+      </div>
+      <div class="rec teal">
+        <div class="ico">🤝</div>
+        <div><h3>A tu equipo de apoyo</h3>
+        <p>Detrás de cada agente hay un gran equipo. Ellos también reciben su reconocimiento — dinos sus nombres en el formulario.</p></div>
+      </div>
+      <div class="rec coral">
+        <div class="ico">🎓</div>
+        <div><h3>A tus graduados — con Luli y Gabo</h3>
+        <p>Tus pequeños y no tan pequeños que terminaron kínder, primaria, secundaria, prepa o universidad recibirán un certificado especial con <strong>Luli y Gabo</strong>, los personajes oficiales de GNP. Conócelos en <a href="https://luliygabo.com" target="_blank" rel="noopener">luliygabo.com</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="park">
+      <h3>🚗 ¿Cómo llegar y dónde estacionarte?</h3>
+      <ul>
+        <li>🅿️ <span><strong>Estacionamiento del edificio</strong> (techado, dentro del mismo Cinépolis Diana) — cobra por hora/fracción y hay validación parcial con boleto.</span></li>
+        <li>🅿️ <span><strong>Corporativo Reforma Diana</strong> — pensión pública justo enfrente, en Av. Paseo de la Reforma 412.</span></li>
+        <li>🚇 <span><strong>Metro Sevilla</strong> (Línea 1) — a 10 minutos caminando.</span></li>
+        <li>🚌 <span><strong>Metrobús La Diana</strong> (Línea 7) — a unos pasos de la entrada.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="rsvp">
+    <h2>Confirma tu asistencia</h2>
+    <p class="sub">Necesitamos los nombres completos <strong>tal como quieres que aparezcan en los certificados</strong>, y el total de personas que asistirán contigo.</p>
+
+    <form class="form-card" id="rsvpForm">
+      <label>Tu nombre completo (agente) <span class="req">*</span></label>
+      <input type="text" id="agente" required placeholder="Nombre y apellidos, como irá en tu certificado">
+
+      <div class="row2">
+        <div>
+          <label>Promotoría <span class="req">*</span></label>
+          <select id="compania" required>
+            <option value="">Selecciona…</option>
+            <option>Prospera Seguros</option>
+            <option>VeSeguro</option>
+          </select>
+        </div>
+        <div>
+          <label>Celular (WhatsApp)</label>
+          <input type="tel" id="telefono" placeholder="55 0000 0000">
+        </div>
+      </div>
+
+      <div class="row2">
+        <div>
+          <label>¿Asistirás? <span class="req">*</span></label>
+          <select id="asistira" required>
+            <option value="">Selecciona…</option>
+            <option value="si">Sí, ahí estaré 🎉</option>
+            <option value="no">No podré asistir</option>
+          </select>
+        </div>
+        <div>
+          <label>Total de personas que asistirán <span class="req">*</span></label>
+          <input type="number" id="total" min="0" max="40" required placeholder="Incluyéndote a ti">
+          <div class="hint">Cuenta a todos: tú, familia, equipo, graduados.</div>
+        </div>
+      </div>
+
+      <fieldset>
+        <legend>🎓 Tus graduados (pequeños y no tan pequeños)</legend>
+        <div class="hint" style="margin-top:6px">Todos los niveles cuentan: kínder, primaria, secundaria, preparatoria y universidad. Cada uno recibirá su certificado.</div>
+        <div id="gradList"></div>
+        <button type="button" class="add" onclick="addGrad()">＋ Agregar graduado</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>🤝 Tu equipo de apoyo</legend>
+        <div class="hint" style="margin-top:6px">Nombres completos de las personas de tu equipo que quieres reconocer.</div>
+        <div id="teamList"></div>
+        <button type="button" class="add" onclick="addTeam()">＋ Agregar integrante del equipo</button>
+      </fieldset>
+
+      <label>Comentarios</label>
+      <textarea id="comentarios" rows="3" placeholder="Alergias, accesibilidad, o cualquier detalle que debamos saber"></textarea>
+
+      <div class="err" id="errBox"></div>
+      <button class="submit" id="submitBtn" type="submit">Confirmar asistencia ✅</button>
+    </form>
+
+    <div class="success" id="successBox">
+      <div class="big">🎉</div>
+      <h2>¡Confirmación recibida!</h2>
+      <p>Gracias. Estamos preparando los reconocimientos para ti, tu equipo y tus graduados.<br>Nos vemos el <strong>viernes 17 de julio a las 10:00 am</strong> en Cinépolis Diana.</p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="luli-badge">🧒 Certificados infantiles con Luli y Gabo · <a href="https://luliygabo.com" target="_blank" rel="noopener">luliygabo.com</a></div>
+  <p>Prospera Seguros · VeSeguro · Agentes GNP<br>Evento de Reconocimiento 2026</p>
+</footer>
+
+<script>
+const SUPABASE_URL = "https://mkezccaibxiptdoqnudw.supabase.co";
+const SUPABASE_KEY = "sb_publishable_jR1moYV38_5IXF08-rZO9g_u8uo6c_0";
+const NIVELES = ["Kínder","Primaria","Secundaria","Preparatoria","Universidad","Posgrado"];
+
+function addGrad(){
+  const d = document.createElement("div");
+  d.className = "dyn-row grad";
+  d.innerHTML = `<input type="text" placeholder="Nombre completo del graduado" class="g-nombre">
+    <select class="g-nivel"><option value="">Nivel…</option>${NIVELES.map(n=>`<option>${n}</option>`).join("")}</select>
+    <button type="button" class="rm" onclick="this.parentNode.remove()">✕</button>`;
+  document.getElementById("gradList").appendChild(d);
+}
+function addTeam(){
+  const d = document.createElement("div");
+  d.className = "dyn-row";
+  d.innerHTML = `<input type="text" placeholder="Nombre completo del integrante" class="t-nombre">
+    <button type="button" class="rm" onclick="this.parentNode.remove()">✕</button>`;
+  document.getElementById("teamList").appendChild(d);
+}
+addGrad(); addTeam();
+
+document.getElementById("rsvpForm").addEventListener("submit", async (e)=>{
+  e.preventDefault();
+  const btn = document.getElementById("submitBtn");
+  const errBox = document.getElementById("errBox");
+  errBox.style.display = "none";
+  btn.disabled = true; btn.textContent = "Enviando…";
+
+  const graduados = [...document.querySelectorAll("#gradList .dyn-row")].map(r=>({
+    nombre: r.querySelector(".g-nombre").value.trim(),
+    nivel: r.querySelector(".g-nivel").value
+  })).filter(g=>g.nombre);
+  const equipo = [...document.querySelectorAll("#teamList .dyn-row")].map(r=>r.querySelector(".t-nombre").value.trim()).filter(Boolean);
+
+  const gradSinNivel = graduados.find(g=>!g.nivel);
+  if(gradSinNivel){
+    errBox.textContent = `Falta el nivel escolar de: ${gradSinNivel.nombre}`;
+    errBox.style.display = "block";
+    btn.disabled = false; btn.textContent = "Confirmar asistencia ✅";
+    return;
+  }
+
+  const payload = {
+    agente_nombre: document.getElementById("agente").value.trim(),
+    compania: document.getElementById("compania").value,
+    telefono: document.getElementById("telefono").value.trim(),
+    asistira: document.getElementById("asistira").value === "si",
+    total_asistentes: parseInt(document.getElementById("total").value || "0", 10),
+    graduados, equipo_apoyo: equipo,
+    comentarios: document.getElementById("comentarios").value.trim()
+  };
+
+  try{
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/evento_rsvp`, {
+      method:"POST",
+      headers:{ "Content-Type":"application/json", "apikey":SUPABASE_KEY, "Authorization":`Bearer ${SUPABASE_KEY}` },
+      body: JSON.stringify(payload)
+    });
+    if(!res.ok) throw new Error(await res.text());
+    document.getElementById("rsvpForm").style.display = "none";
+    document.getElementById("successBox").style.display = "block";
+    document.getElementById("successBox").scrollIntoView({behavior:"smooth"});
+  }catch(err){
+    errBox.textContent = "No se pudo enviar. Revisa tu conexión e intenta de nuevo.";
+    errBox.style.display = "block";
+    btn.disabled = false; btn.textContent = "Confirmar asistencia ✅";
+  }
+});
+</script>
+</body>
+</html>
