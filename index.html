@@ -134,7 +134,7 @@
       <div class="rec coral">
         <div class="ico">🎓</div>
         <div><h3>A tus graduados — con Luli y Gabo <span class="tag award">Reciben reconocimiento</span></h3>
-        <p>Tus pequeños y no tan pequeños que completaron cualquier grado — de maternal a universidad — recibirán un certificado especial con su nombre y con <strong>Luli y Gabo</strong>, los personajes oficiales de GNP. Conócelos en <a href="https://luliygabo.com" target="_blank" rel="noopener">luliygabo.com</a></p></div>
+        <p>El certificado es para <strong>cualquier grado o año escolar que hayan terminado</strong> — no solo el fin de un nivel, sino cualquier año, de maternal a universidad. Cada graduado recibe su certificado con su nombre y con <strong>Luli y Gabo</strong>, los personajes oficiales de GNP. Conócelos en <a href="https://luliygabo.com" target="_blank" rel="noopener">luliygabo.com</a></p></div>
       </div>
       <div class="rec teal">
         <div class="ico">👨‍👩‍👧‍👦</div>
@@ -164,20 +164,8 @@
       <label>Tu nombre completo (agente) <span class="req">*</span></label>
       <input type="text" id="agente" required placeholder="Nombre y apellidos, como irá en tu certificado">
 
-      <div class="row2">
-        <div>
-          <label>Promotoría <span class="req">*</span></label>
-          <select id="compania" required>
-            <option value="">Selecciona…</option>
-            <option>Prospera Seguros</option>
-            <option>VeSeguro</option>
-          </select>
-        </div>
-        <div>
-          <label>Celular (WhatsApp)</label>
-          <input type="tel" id="telefono" placeholder="55 0000 0000">
-        </div>
-      </div>
+      <label>Celular (WhatsApp)</label>
+      <input type="tel" id="telefono" placeholder="55 0000 0000">
 
       <div class="row2">
         <div>
@@ -197,7 +185,7 @@
 
       <fieldset>
         <legend>🎓 Tus graduados (pequeños y no tan pequeños)</legend>
-        <div class="hint" style="margin-top:6px">Agrega a quienes completaron cualquier grado — de maternal a universidad. Cada uno recibirá su certificado con su nombre. Si no tienes graduados este año, deja esta sección vacía.</div>
+        <div class="hint" style="margin-top:6px">El certificado es para <strong>cualquier grado o año escolar terminado</strong> — no importa si es fin de nivel o no. Agrega a cada graduado con su nombre e indícanos <strong>qué grado terminó</strong> (de maternal a universidad). Si no tienes graduados este año, deja esta sección vacía.</div>
         <div id="gradList"></div>
         <button type="button" class="add" onclick="addGrad()">＋ Agregar graduado</button>
       </fieldset>
@@ -231,7 +219,7 @@ function addGrad(){
   const d = document.createElement("div");
   d.className = "dyn-row grad";
   d.innerHTML = `<input type="text" placeholder="Nombre completo del graduado" class="g-nombre">
-    <select class="g-nivel"><option value="">Nivel…</option>${NIVELES.map(n=>`<option>${n}</option>`).join("")}</select>
+    <select class="g-nivel"><option value="">¿Qué grado terminó?</option>${NIVELES.map(n=>`<option>${n}</option>`).join("")}</select>
     <button type="button" class="rm" onclick="this.parentNode.remove()">✕</button>`;
   document.getElementById("gradList").appendChild(d);
 }
@@ -251,7 +239,7 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e)=>{
 
   const gradSinNivel = graduados.find(g=>!g.nivel);
   if(gradSinNivel){
-    errBox.textContent = `Falta el nivel escolar de: ${gradSinNivel.nombre}`;
+    errBox.textContent = `Falta indicar qué grado terminó: ${gradSinNivel.nombre}`;
     errBox.style.display = "block";
     btn.disabled = false; btn.textContent = "Confirmar asistencia ✅";
     return;
@@ -259,7 +247,6 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e)=>{
 
   const payload = {
     agente_nombre: document.getElementById("agente").value.trim(),
-    compania: document.getElementById("compania").value,
     telefono: document.getElementById("telefono").value.trim(),
     asistira: document.getElementById("asistira").value === "si",
     total_asistentes: parseInt(document.getElementById("total").value || "0", 10),
