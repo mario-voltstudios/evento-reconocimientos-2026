@@ -9,64 +9,65 @@
   body{font-family:'Trebuchet MS','Segoe UI',sans-serif;}
   .cert{
     width:1122px;height:794px;position:relative;overflow:hidden;
-    background:
-      radial-gradient(circle at 12% 18%, #ffe9a8 0 3px, transparent 4px),
-      radial-gradient(circle at 88% 82%, #ffd0e0 0 3px, transparent 4px),
-      linear-gradient(140deg,#fff8ee 0%,#fef2f7 55%,#eefaff 100%);
+    background:linear-gradient(140deg,#fff8ee 0%,#fef2f7 55%,#eefaff 100%);
   }
-  /* playful border */
   .frame{position:absolute;inset:26px;border:6px solid #ffcf3f;border-radius:34px;
     box-shadow:0 0 0 5px #ff7eb0 inset;}
-  .dots{position:absolute;inset:0;pointer-events:none;}
-  .dot{position:absolute;font-size:34px;opacity:.9;}
-  .d1{top:60px;left:70px;}.d2{top:80px;right:80px;}.d3{bottom:70px;left:90px;}
-  .d4{bottom:66px;right:96px;}.d5{top:300px;left:48px;font-size:26px;}
-  .d6{top:330px;right:52px;font-size:26px;}
+  .dot{position:absolute;font-size:32px;opacity:.9;}
+  .d1{top:150px;left:70px;}.d2{top:170px;right:78px;}
+  .d3{top:390px;left:56px;font-size:26px;}.d4{top:420px;right:60px;font-size:26px;}
   .inner{position:absolute;inset:26px;display:flex;flex-direction:column;align-items:center;
-    justify-content:center;text-align:center;padding:56px 90px;}
-  .kicker{font-size:20px;letter-spacing:.28em;color:#e8604c;font-weight:800;text-transform:uppercase;}
-  .brand{margin-top:6px;font-size:30px;font-weight:800;color:#1e8a7a;}
-  .brand span{color:#ff7eb0;}
-  .cap{font-size:64px;margin:14px 0 4px;}
-  .title{font-size:40px;font-weight:800;color:#0e1f3d;line-height:1.1;}
-  .to{margin-top:26px;font-size:19px;color:#6b6f7a;}
-  .name{margin:8px 0 6px;font-size:56px;font-weight:800;color:#d4691f;
-    font-family:'Georgia',serif;border-bottom:4px dotted #ffcf3f;padding-bottom:8px;display:inline-block;}
-  .body{margin-top:22px;font-size:20px;color:#3a4152;max-width:760px;line-height:1.5;}
-  .lvl{display:inline-block;margin-top:18px;background:#1e8a7a;color:#fff;font-weight:800;
-    font-size:22px;padding:10px 26px;border-radius:999px;}
-  .foot{position:absolute;left:80px;right:80px;bottom:70px;display:flex;justify-content:space-between;align-items:flex-end;}
-  .sig{width:260px;text-align:center;}
-  .sig .line{border-top:2px solid #b9c0cc;padding-top:8px;font-size:15px;color:#6b6f7a;}
+    text-align:center;padding:40px 90px 30px;}
+  .logos{display:flex;align-items:center;justify-content:center;gap:44px;margin-bottom:10px;}
+  .logos img{display:block;}
+  .logo-prospera{height:62px;}
+  .logo-gnp{height:46px;}
+  .kicker{font-size:17px;letter-spacing:.26em;color:#e8604c;font-weight:800;text-transform:uppercase;margin-top:6px;}
+  .luli-art{margin-top:12px;height:150px;border-radius:16px;box-shadow:0 8px 22px rgba(14,31,61,.16);}
+  .title{margin-top:16px;font-size:36px;font-weight:800;color:#0e1f3d;line-height:1.1;}
+  .to{margin-top:14px;font-size:17px;color:#6b6f7a;}
+  .name{margin:4px 0 2px;font-size:50px;font-weight:800;color:#d4691f;
+    font-family:'Georgia',serif;border-bottom:4px dotted #ffcf3f;padding-bottom:6px;display:inline-block;}
+  .body{margin-top:14px;font-size:18px;color:#3a4152;max-width:720px;line-height:1.45;}
+  .lvl{display:inline-block;margin-top:12px;background:#1e8a7a;color:#fff;font-weight:800;
+    font-size:20px;padding:8px 24px;border-radius:999px;}
+  .foot{position:absolute;left:84px;right:84px;bottom:56px;display:flex;justify-content:space-between;align-items:flex-end;}
+  .sig{width:300px;text-align:center;}
+  .sig .line{border-top:2px solid #b9c0cc;padding-top:7px;font-size:15px;color:#22283a;font-weight:700;}
+  .sig .role{font-size:12.5px;color:#98a0ad;margin-top:2px;}
+  .brandfoot{text-align:right;}
   .site{font-size:16px;color:#1e8a7a;font-weight:700;}
-  .badge{font-size:15px;color:#98a0ad;}
+  .badge{font-size:13.5px;color:#98a0ad;margin-top:2px;}
 </style>
 </head>
 <body>
 <div class="cert">
   <div class="frame"></div>
-  <div class="dots">
-    <div class="dot d1">⭐</div><div class="dot d2">🎈</div>
-    <div class="dot d3">🎈</div><div class="dot d4">⭐</div>
-    <div class="dot d5">✨</div><div class="dot d6">✨</div>
-  </div>
+  <div class="dot d1">⭐</div><div class="dot d2">🎈</div>
+  <div class="dot d3">✨</div><div class="dot d4">✨</div>
   <div class="inner">
+    <div class="logos">
+      <img class="logo-prospera" src="assets/logo-prospera.png" alt="Prospera Agencia de Seguros">
+      <img class="logo-gnp" src="assets/logo-gnp.svg" alt="GNP Seguros">
+    </div>
     <div class="kicker">Reconocimiento Especial</div>
-    <div class="brand">Luli <span>y</span> Gabo</div>
-    <div class="cap">🎓</div>
+    <img class="luli-art" src="assets/luli-gabo-banner.jpg" alt="Luli y Gabo">
     <div class="title">¡Felicidades por tu graduación!</div>
     <div class="to">Este certificado es para</div>
     <div class="name">McKenna Pulido</div>
-    <div class="body">Por tu esfuerzo, tu dedicación y las ganas de aprender a cuidarte y crecer. ¡Estamos muy orgullosos de ti!</div>
+    <div class="body">Por tu esfuerzo, tu dedicación y las ganas de aprender y crecer. ¡Estamos muy orgullosos de ti!</div>
     <div class="lvl">Kínder</div>
   </div>
   <div class="foot">
-    <div class="sig"><div class="line">Prospera Seguros · VeSeguro</div></div>
-    <div style="text-align:center">
-      <div class="site">luliygabo.com</div>
-      <div class="badge">Personajes oficiales de GNP · 17 de julio, 2026</div>
+    <div class="sig">
+      <div style="height:34px"></div>
+      <div class="line">Ing. Mario Alberto Pulido Fernández</div>
+      <div class="role">Dirección · Prospera Seguros · VeSeguro</div>
     </div>
-    <div class="sig"><div class="line">Familia Pulido</div></div>
+    <div class="brandfoot">
+      <div class="site">luliygabo.com</div>
+      <div class="badge">Luli y Gabo®, personajes oficiales de GNP · 17 de julio, 2026</div>
+    </div>
   </div>
 </div>
 </body>
