@@ -3,65 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <title>Certificado de Reconocimiento — Agente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   @page{size:1122px 794px;margin:0;}
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Georgia','Times New Roman',serif;}
+  body{font-family:'Montserrat',sans-serif;}
   .cert{width:1122px;height:794px;position:relative;overflow:hidden;
-    background:linear-gradient(160deg,#ffffff 0%,#f7f9fc 100%);}
-  .frame{position:absolute;inset:30px;border:2px solid #16305e;}
-  .frame::before{content:"";position:absolute;inset:8px;border:1px solid #d4a437;}
-  .corner{position:absolute;width:64px;height:64px;border:3px solid #d4a437;}
-  .c1{top:40px;left:40px;border-right:none;border-bottom:none;}
-  .c2{top:40px;right:40px;border-left:none;border-bottom:none;}
-  .c3{bottom:40px;left:40px;border-right:none;border-top:none;}
-  .c4{bottom:40px;right:40px;border-left:none;border-top:none;}
-  .inner{position:absolute;inset:30px;display:flex;flex-direction:column;align-items:center;
-    justify-content:center;text-align:center;padding:70px 110px;}
-  .logos{display:flex;align-items:center;justify-content:center;gap:48px;}
-  .logo-prospera{height:100px;margin:-16px 0;}
-  .logo-gnp{height:46px;}
-  .seal{font-size:48px;margin:8px 0 2px;}
-  .title{font-size:46px;font-weight:700;color:#0e1f3d;letter-spacing:.02em;}
-  .rule{width:120px;height:3px;background:#d4a437;margin:18px 0 26px;}
-  .to{font-family:'Segoe UI',sans-serif;font-size:18px;color:#6b7280;}
-  .name{margin:10px 0 8px;font-size:56px;color:#16305e;font-weight:700;}
-  .underline{width:520px;border-bottom:1.5px solid #c9ced8;margin-bottom:24px;}
-  .body{font-family:'Segoe UI',sans-serif;font-size:19px;color:#3a4152;max-width:780px;line-height:1.6;}
-  .role{display:inline-block;margin-top:20px;font-family:'Segoe UI',sans-serif;font-size:16px;
-    letter-spacing:.12em;text-transform:uppercase;color:#8a6d1f;font-weight:700;
-    border:1.5px solid #d4a437;border-radius:4px;padding:8px 22px;}
-  .foot{position:absolute;left:110px;right:110px;bottom:80px;display:flex;
-    justify-content:center;font-family:'Segoe UI',sans-serif;}
-  .sig{width:360px;text-align:center;}
+    background:
+      radial-gradient(900px 640px at 50% 38%, #fffefb 0%, #faf7ef 58%, #f3edda 100%);}
+  /* fine engraving texture */
+  .cert::before{content:"";position:absolute;inset:0;opacity:.55;
+    background:
+      repeating-linear-gradient(45deg, rgba(22,48,94,.022) 0 1px, transparent 1px 10px),
+      repeating-linear-gradient(-45deg, rgba(176,141,47,.022) 0 1px, transparent 1px 10px);}
+  /* soft gold vignette corners */
+  .cert::after{content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(420px 300px at 0% 0%, rgba(201,165,63,.10), transparent 70%),
+      radial-gradient(420px 300px at 100% 0%, rgba(201,165,63,.10), transparent 70%),
+      radial-gradient(420px 300px at 0% 100%, rgba(201,165,63,.10), transparent 70%),
+      radial-gradient(420px 300px at 100% 100%, rgba(201,165,63,.10), transparent 70%);}
+
+  /* frames */
+  .f-outer{position:absolute;inset:26px;border:2.5px solid #16305e;z-index:2;}
+  .f-gold{position:absolute;inset:34px;border:1px solid #c9a53f;z-index:2;}
+  .f-gold::before{content:"";position:absolute;inset:3px;border:1px solid rgba(201,165,63,.45);}
+  /* corner ornaments */
+  .orn{position:absolute;width:46px;height:46px;z-index:3;}
+  .orn::before{content:"";position:absolute;inset:0;border:2px solid #c9a53f;}
+  .orn::after{content:"";position:absolute;top:50%;left:50%;width:12px;height:12px;margin:-6px 0 0 -6px;
+    background:#16305e;transform:rotate(45deg);box-shadow:0 0 0 2.5px #f7f3e6, 0 0 0 4px #c9a53f;}
+  .o1{top:12px;left:12px;border-right:none;border-bottom:none;}
+  .o1::before{border-right:none;border-bottom:none;}
+  .o2{top:12px;right:12px;}.o2::before{border-left:none;border-bottom:none;}
+  .o3{bottom:12px;left:12px;}.o3::before{border-right:none;border-top:none;}
+  .o4{bottom:12px;right:12px;}.o4::before{border-left:none;border-top:none;}
+
+  .inner{position:absolute;inset:34px;display:flex;flex-direction:column;align-items:center;
+    text-align:center;padding:44px 110px 30px;z-index:4;}
+  .logos{display:flex;align-items:center;justify-content:center;gap:52px;}
+  .logo-prospera{height:96px;margin:-15px 0;}
+  .logo-gnp{height:44px;}
+
+  /* medallion */
+  .medal{position:relative;margin-top:6px;width:104px;height:104px;}
+  .medal .ribbons{position:absolute;top:58px;left:50%;width:0;}
+  .medal .rib{position:absolute;width:26px;height:64px;top:0;}
+  .medal .rib.l{left:-34px;transform:rotate(14deg);
+    background:linear-gradient(180deg,#1d3a6e,#16305e);clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%);}
+  .medal .rib.r{left:8px;transform:rotate(-14deg);
+    background:linear-gradient(180deg,#1d3a6e,#16305e);clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%);}
+  .medal .disc{position:absolute;inset:0;border-radius:50%;
+    background:radial-gradient(circle at 34% 28%, #ffe9a8 0%, #e9c25c 38%, #c9982f 72%, #a87c1f 100%);
+    box-shadow:0 0 0 3px #b08d2f, 0 0 0 6px #f7f0da, 0 0 0 7.5px #c9a53f, 0 10px 22px rgba(140,105,30,.35);
+    display:flex;align-items:center;justify-content:center;}
+  .medal .disc::before{content:"";position:absolute;inset:9px;border-radius:50%;
+    border:1.5px dashed rgba(120,88,20,.55);}
+  .medal svg{position:relative;filter:drop-shadow(0 2px 2px rgba(120,88,20,.45));}
+
+  .kicker{margin-top:14px;font-size:12.5px;letter-spacing:.42em;color:#a8842c;font-weight:600;text-transform:uppercase;}
+  .title{margin-top:4px;font-family:'Playfair Display',serif;font-size:47px;font-weight:800;color:#14284e;letter-spacing:.01em;}
+
+  .flourish{margin-top:8px;}
+
+  .to{margin-top:14px;font-size:13.5px;color:#8a8f9c;letter-spacing:.24em;text-transform:uppercase;font-weight:500;}
+  .name{margin-top:2px;font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:700;color:#16305e;line-height:1.12;}
+  .name-rule{width:520px;height:14px;margin-top:-2px;position:relative;}
+  .name-rule::before{content:"";position:absolute;top:6px;left:0;right:0;height:1px;
+    background:linear-gradient(90deg,transparent,#c9a53f 18%,#c9a53f 82%,transparent);}
+  .name-rule::after{content:"";position:absolute;top:2.5px;left:50%;width:8px;height:8px;margin-left:-4px;
+    background:#c9a53f;transform:rotate(45deg);box-shadow:0 0 0 2px #faf7ef;}
+
+  .body{margin-top:16px;font-size:15.5px;color:#4a5568;max-width:720px;line-height:1.65;font-weight:500;}
+
+  .tier{margin-top:18px;display:flex;align-items:center;gap:20px;}
+  .tier .t{font-size:19px;letter-spacing:.22em;text-transform:uppercase;color:#a8842c;font-weight:700;}
+
+  .foot{position:absolute;left:110px;right:110px;bottom:78px;display:flex;justify-content:center;z-index:4;}
+  .sig{width:380px;text-align:center;}
+  .sig .space{height:40px;}
   .sig .line{border-top:1.5px solid #16305e;padding-top:8px;font-size:15px;color:#16305e;font-weight:700;}
-  .sig .cargo{font-size:12.5px;color:#6b7280;margin-top:2px;}
-  .date{position:absolute;bottom:52px;left:0;right:0;text-align:center;
-    font-family:'Segoe UI',sans-serif;font-size:13px;color:#98a0ad;}
+  .sig .cargo{font-size:12px;color:#8a8f9c;margin-top:2px;letter-spacing:.06em;font-weight:500;}
+  .date{position:absolute;bottom:52px;left:0;right:0;text-align:center;font-size:11.5px;
+    color:#a3a8b4;letter-spacing:.14em;text-transform:uppercase;z-index:4;}
 </style>
 </head>
 <body>
 <div class="cert">
-  <div class="frame"></div>
-  <div class="corner c1"></div><div class="corner c2"></div>
-  <div class="corner c3"></div><div class="corner c4"></div>
+  <div class="f-outer"></div><div class="f-gold"></div>
+  <div class="orn o1"></div><div class="orn o2"></div><div class="orn o3"></div><div class="orn o4"></div>
   <div class="inner">
     <div class="logos">
       <img class="logo-prospera" src="assets/logo-prospera.png" alt="Prospera Agencia de Seguros">
       <img class="logo-gnp" src="assets/logo-gnp.svg" alt="GNP Seguros">
     </div>
-    <div class="seal">🏆</div>
+    <div class="medal">
+      <div class="ribbons"><i class="rib l"></i><i class="rib r"></i></div>
+      <div class="disc">
+        <svg width="46" height="46" viewBox="0 0 100 100">
+          <path d="M50 12 L61.5 38 L90 41 L68.5 60 L74.5 88 L50 73.5 L25.5 88 L31.5 60 L10 41 L38.5 38 Z" fill="#fffbe9"/>
+        </svg>
+      </div>
+    </div>
+    <div class="kicker">Evento de Reconocimiento 2026</div>
     <div class="title">Certificado de Reconocimiento</div>
-    <div class="rule"></div>
+    <svg class="flourish" width="300" height="18" viewBox="0 0 300 18" fill="none">
+      <path d="M10 9 H128 M172 9 H290" stroke="#c9a53f" stroke-width="1.4"/>
+      <path d="M128 9 C 136 2, 144 2, 150 9 C 156 16, 164 16, 172 9" stroke="#c9a53f" stroke-width="1.4"/>
+      <rect x="146" y="5" width="8" height="8" transform="rotate(45 150 9)" fill="#c9a53f"/>
+      <circle cx="10" cy="9" r="2.2" fill="#c9a53f"/><circle cx="290" cy="9" r="2.2" fill="#c9a53f"/>
+    </svg>
     <div class="to">Se otorga con orgullo a</div>
     <div class="name">Sergio Tapia Becerril</div>
-    <div class="underline"></div>
+    <div class="name-rule"></div>
     <div class="body">En reconocimiento a su dedicación, profesionalismo y compromiso excepcional a lo largo del año. Su esfuerzo y el de su equipo hacen posible todo lo que logramos juntos.</div>
-    <div class="role">Agente Diamante</div>
+    <div class="tier">
+      <svg width="72" height="34" viewBox="0 0 72 34" fill="none">
+        <path d="M4 30 Q 32 26 68 6" stroke="#b08d2f" stroke-width="1.6"/>
+        <g fill="#b08d2f">
+          <ellipse cx="12" cy="27.5" rx="7.5" ry="2.8" transform="rotate(-14 12 27.5)"/>
+          <ellipse cx="24" cy="24" rx="7" ry="2.7" transform="rotate(-20 24 24)"/>
+          <ellipse cx="35" cy="20" rx="6.5" ry="2.6" transform="rotate(-26 35 20)"/>
+          <ellipse cx="45" cy="15.5" rx="6" ry="2.4" transform="rotate(-32 45 15.5)"/>
+          <ellipse cx="54" cy="11" rx="5.5" ry="2.2" transform="rotate(-38 54 11)"/>
+          <ellipse cx="62" cy="7" rx="4.5" ry="2" transform="rotate(-44 62 7)"/>
+        </g>
+      </svg>
+      <div class="t">Agente Diamante</div>
+      <svg width="72" height="34" viewBox="0 0 72 34" fill="none" style="transform:scaleX(-1)">
+        <path d="M4 30 Q 32 26 68 6" stroke="#b08d2f" stroke-width="1.6"/>
+        <g fill="#b08d2f">
+          <ellipse cx="12" cy="27.5" rx="7.5" ry="2.8" transform="rotate(-14 12 27.5)"/>
+          <ellipse cx="24" cy="24" rx="7" ry="2.7" transform="rotate(-20 24 24)"/>
+          <ellipse cx="35" cy="20" rx="6.5" ry="2.6" transform="rotate(-26 35 20)"/>
+          <ellipse cx="45" cy="15.5" rx="6" ry="2.4" transform="rotate(-32 45 15.5)"/>
+          <ellipse cx="54" cy="11" rx="5.5" ry="2.2" transform="rotate(-38 54 11)"/>
+          <ellipse cx="62" cy="7" rx="4.5" ry="2" transform="rotate(-44 62 7)"/>
+        </g>
+      </svg>
+    </div>
   </div>
   <div class="foot">
     <div class="sig">
-      <div style="height:38px"></div>
+      <div class="space"></div>
       <div class="line">Ing. Mario Alberto Pulido Fernández</div>
       <div class="cargo">Dirección · Prospera Seguros</div>
     </div>
