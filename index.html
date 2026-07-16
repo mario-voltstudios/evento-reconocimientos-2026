@@ -112,7 +112,7 @@
 
       <fieldset>
         <legend>🎓 Tus pequeños que terminaron la escuela</legend>
-        <div class="hint" style="margin-top:6px">Nombre y qué grado terminó (cualquier año, de maternal a universidad). Recibe su certificado con su nombre. Déjalo vacío si no aplica.</div>
+        <div class="hint" style="margin-top:6px">Nombre de cada pequeño y <strong>¿de qué grado se gradúan?</strong> Recibe su certificado con su nombre. Déjalo vacío si no aplica.</div>
         <div id="gradList"></div>
         <button type="button" class="add" onclick="addGrad()">＋ Agregar</button>
       </fieldset>
@@ -149,8 +149,8 @@
 
       <div class="park">
         <ul>
-          <li>🅿️ <span>Estacionamiento del edificio (techado, con validación por boleto).</span></li>
-          <li>🅿️ <span>Pensión Corporativo Reforma Diana, enfrente (Reforma 412).</span></li>
+          <li>🅿️ <span>Estacionamiento propio del cine, techado y con valet (cobro por hora).</span></li>
+          <li>🅿️ <span>Estacionamiento público Corporativo Reforma Diana, enfrente (Reforma 412).</span></li>
           <li>🚇 <span>Metro Sevilla (L1), 10 min caminando.</span></li>
           <li>🚌 <span>Metrobús La Diana (L7), a unos pasos.</span></li>
         </ul>
@@ -160,20 +160,18 @@
 </div>
 
 <footer>
-  <div class="luli-badge">🧒 Certificados infantiles con Luli y Gabo</div>
   <p>Prospera Seguros · VeSeguro · Agentes GNP<br>Evento de Reconocimiento 2026</p>
 </footer>
 
 <script>
 const SUPABASE_URL = "https://mkezccaibxiptdoqnudw.supabase.co";
 const SUPABASE_KEY = "sb_publishable_jR1moYV38_5IXF08-rZO9g_u8uo6c_0";
-const NIVELES = ["Maternal","Kínder / Preescolar","Primaria","Secundaria","Preparatoria","Universidad"];
 
 function addGrad(){
   const d = document.createElement("div");
   d.className = "dyn-row grad";
   d.innerHTML = `<input type="text" placeholder="Nombre completo" class="g-nombre">
-    <select class="g-nivel"><option value="">¿Qué grado terminó?</option>${NIVELES.map(n=>`<option>${n}</option>`).join("")}</select>
+    <input type="text" placeholder="¿De qué grado se gradúa?" class="g-grado">
     <button type="button" class="rm" onclick="this.parentNode.remove()">✕</button>`;
   document.getElementById("gradList").appendChild(d);
 }
@@ -195,13 +193,13 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e)=>{
 
   const graduados = [...document.querySelectorAll("#gradList .dyn-row")].map(r=>({
     nombre: r.querySelector(".g-nombre").value.trim(),
-    nivel: r.querySelector(".g-nivel").value
+    grado: r.querySelector(".g-grado").value.trim()
   })).filter(g=>g.nombre);
   const personas_clave = [...document.querySelectorAll("#keyList .k-nombre")].map(i=>i.value.trim()).filter(Boolean);
 
-  const gradSinNivel = graduados.find(g=>!g.nivel);
-  if(gradSinNivel){
-    errBox.textContent = `Falta indicar qué grado terminó: ${gradSinNivel.nombre}`;
+  const gradSinGrado = graduados.find(g=>!g.grado);
+  if(gradSinGrado){
+    errBox.textContent = `Falta indicar de qué grado se gradúa: ${gradSinGrado.nombre}`;
     errBox.style.display = "block";
     btn.disabled = false; btn.textContent = "Confirmar asistencia ✅";
     return;
