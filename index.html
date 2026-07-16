@@ -5,64 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🎓 Evento de Reconocimiento 2026 · Prospera + VeSeguro</title>
 <meta property="og:title" content="🎓 Evento de Reconocimiento 2026">
-<meta property="og:description" content="Queremos reconocerte a ti y a tus graduados, y recibir a tu familia. Viernes 17 de julio · 10:00 am · Cinépolis Diana, CDMX. Confirma aquí.">
+<meta property="og:description" content="Queremos celebrarte a ti, a tu equipo y a tus pequeños que terminaron la escuela. Viernes 17 de julio, 10:00 am, Cinépolis Diana. Confirma aquí.">
 <style>
   :root{
     --navy:#0e1f3d; --navy2:#16305e; --gold:#d4a437; --gold2:#f0c65e;
-    --cream:#faf6ee; --white:#ffffff; --teal:#1e8a7a; --coral:#e8604c;
+    --cream:#faf6ee; --white:#ffffff; --coral:#e8604c;
     --sky:#3b82c4; --ink:#22283a; --muted:#6b7280;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   body{font-family:'Avenir Next','Segoe UI',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;}
-  .wrap{max-width:680px;margin:0 auto;padding:0 20px;}
+  .wrap{max-width:640px;margin:0 auto;padding:0 20px;}
 
-  /* HERO */
-  .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 70%,#1d3f7a 100%);color:var(--white);text-align:center;padding:52px 20px 100px;position:relative;overflow:hidden;}
-  .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:var(--cream);border-radius:50% 50% 0 0 / 100% 100% 0 0;}
-  .brands{display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:22px;}
-  .brand-chip{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 16px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;}
-  .hero .cap{font-size:2.6rem;}
-  .hero h1{font-size:2rem;font-weight:800;margin:10px auto 14px;max-width:540px;}
+  .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 70%,#1d3f7a 100%);color:var(--white);text-align:center;padding:48px 20px 80px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:56px;background:var(--cream);border-radius:50% 50% 0 0 / 100% 100% 0 0;}
+  .brands{display:inline-flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:18px;}
+  .brand-chip{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:5px 14px;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;}
+  .cap{font-size:2.4rem;}
+  .hero h1{font-size:1.9rem;font-weight:800;margin:8px auto 12px;max-width:520px;}
   .hero h1 em{font-style:normal;color:var(--gold2);}
-  .hero p.lead{max-width:520px;margin:0 auto;font-size:1.05rem;opacity:.92;}
+  .hero p.lead{max-width:480px;margin:0 auto;font-size:1.02rem;opacity:.92;}
 
-  /* EVENT CARD */
-  .event-card{background:var(--white);border-radius:20px;box-shadow:0 12px 40px rgba(14,31,61,.14);padding:28px;margin:-60px auto 0;position:relative;z-index:2;}
-  .event-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-  @media(max-width:520px){.event-grid{grid-template-columns:1fr;}}
-  .ev{display:flex;gap:12px;align-items:flex-start;}
-  .ev .ico{font-size:1.5rem;line-height:1.2;}
-  .ev b{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
-  .ev span{font-weight:600;}
-  .cal-btn{display:block;text-align:center;margin-top:20px;background:var(--navy);color:var(--white);text-decoration:none;padding:13px;border-radius:12px;font-weight:700;}
-  .cal-btn:hover{background:var(--navy2);}
+  section{padding:40px 0 0;}
+  h2{font-size:1.35rem;font-weight:800;color:var(--navy);text-align:center;margin-bottom:6px;}
+  .sub{text-align:center;color:var(--muted);max-width:480px;margin:0 auto 22px;font-size:.95rem;}
 
-  section{padding:44px 0 0;}
-  h2{font-size:1.45rem;font-weight:800;color:var(--navy);text-align:center;margin-bottom:8px;}
-  .sub{text-align:center;color:var(--muted);max-width:520px;margin:0 auto 26px;}
+  .card{background:var(--white);border-radius:20px;box-shadow:0 10px 34px rgba(14,31,61,.10);padding:28px 26px;}
+  .form-card{margin-top:-46px;position:relative;z-index:2;}
 
-  /* RECOGNITION CARDS */
-  .rec-grid{display:grid;gap:14px;}
-  .rec{background:var(--white);border-radius:16px;padding:20px 22px;display:flex;gap:16px;align-items:flex-start;border-left:5px solid var(--gold);}
-  .rec.teal{border-left-color:var(--teal);}
-  .rec.coral{border-left-color:var(--coral);}
-  .rec .ico{font-size:1.9rem;}
-  .rec h3{font-size:1.05rem;color:var(--navy);margin-bottom:4px;}
-  .rec .tag{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:6px;margin-left:8px;vertical-align:middle;}
-  .tag.award{background:#fdf2d6;color:#8a6d1f;}
-  .tag.welcome{background:#e4f5f1;color:#12705f;}
-  .rec p{font-size:.93rem;color:#4b5563;}
-  .rec a{color:var(--sky);font-weight:600;text-decoration:none;}
-
-  /* PARKING */
-  .park{background:#eef3fa;border:1px solid #d5e2f2;border-radius:16px;padding:22px 24px;}
-  .park h3{color:var(--navy);font-size:1rem;margin-bottom:12px;}
-  .park ul{list-style:none;}
-  .park li{padding:7px 0;font-size:.93rem;display:flex;gap:10px;align-items:flex-start;border-bottom:1px dashed #d5e2f2;}
-  .park li:last-child{border-bottom:none;}
-
-  /* FORM */
-  .form-card{background:var(--white);border-radius:20px;box-shadow:0 10px 34px rgba(14,31,61,.10);padding:30px 26px;margin-top:8px;}
   label{display:block;font-weight:700;font-size:.88rem;color:var(--navy);margin:18px 0 6px;}
   label .req{color:var(--coral);}
   input[type=text],input[type=tel],input[type=number],select,textarea{
@@ -72,27 +41,37 @@
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   @media(max-width:520px){.row2{grid-template-columns:1fr;}}
   .hint{font-size:.8rem;color:var(--muted);margin-top:4px;}
-  fieldset{border:none;margin-top:26px;padding-top:20px;border-top:2px solid #f0ede4;}
-  legend{font-weight:800;color:var(--navy);font-size:1.02rem;padding-top:20px;}
+  fieldset{border:none;margin-top:24px;padding-top:18px;border-top:2px solid #f0ede4;}
+  legend{font-weight:800;color:var(--navy);font-size:1rem;padding-top:18px;}
   .dyn-row{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:10px;align-items:center;}
   .dyn-row.grad{grid-template-columns:1.4fr 1fr auto;}
   @media(max-width:520px){.dyn-row.grad{grid-template-columns:1fr;}}
   .rm{background:#fceceb;color:var(--coral);border:none;border-radius:8px;width:38px;height:42px;font-size:1.1rem;cursor:pointer;}
   .add{margin-top:12px;background:none;border:2px dashed var(--gold);color:#a07a1f;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;font-size:.9rem;width:100%;}
   .add:hover{background:#fdf6e6;}
-  .submit{width:100%;margin-top:30px;background:linear-gradient(135deg,var(--gold),#c8952a);color:var(--navy);font-size:1.1rem;font-weight:800;border:none;border-radius:12px;padding:16px;cursor:pointer;box-shadow:0 6px 18px rgba(212,164,55,.4);}
+  .submit{width:100%;margin-top:28px;background:linear-gradient(135deg,var(--gold),#c8952a);color:var(--navy);font-size:1.1rem;font-weight:800;border:none;border-radius:12px;padding:16px;cursor:pointer;box-shadow:0 6px 18px rgba(212,164,55,.4);}
   .submit:hover{filter:brightness(1.05);}
   .submit:disabled{opacity:.6;cursor:wait;}
   .err{display:none;background:#fceceb;color:#b3402f;border-radius:10px;padding:12px 16px;margin-top:16px;font-size:.9rem;}
+  .success{display:none;text-align:center;}
+  .success .big{font-size:3rem;}
+  .success h2{margin:10px 0 8px;}
 
-  /* SUCCESS */
-  .success{display:none;text-align:center;background:var(--white);border-radius:20px;padding:50px 30px;margin-top:8px;box-shadow:0 10px 34px rgba(14,31,61,.10);}
-  .success .big{font-size:3.2rem;}
-  .success h2{margin:12px 0 8px;}
+  .ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:520px){.ev-grid{grid-template-columns:1fr;}}
+  .ev{display:flex;gap:12px;align-items:flex-start;}
+  .ev .ico{font-size:1.4rem;}
+  .ev b{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .ev span{font-weight:600;font-size:.95rem;}
+  .cal-btn{display:block;text-align:center;margin-top:18px;background:var(--navy);color:var(--white);text-decoration:none;padding:12px;border-radius:12px;font-weight:700;}
+  .park{margin-top:16px;}
+  .park ul{list-style:none;}
+  .park li{padding:6px 0;font-size:.9rem;display:flex;gap:9px;border-bottom:1px dashed #e5e0d4;}
+  .park li:last-child{border-bottom:none;}
 
-  footer{text-align:center;padding:44px 20px 30px;color:var(--muted);font-size:.85rem;}
+  footer{text-align:center;padding:36px 20px 30px;color:var(--muted);font-size:.82rem;}
   footer a{color:var(--sky);font-weight:600;text-decoration:none;}
-  .luli-badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border-radius:999px;padding:8px 18px;box-shadow:0 4px 14px rgba(14,31,61,.08);margin-bottom:14px;font-weight:700;color:var(--navy);font-size:.9rem;}
+  .luli-badge{display:inline-block;background:var(--white);border-radius:999px;padding:8px 18px;box-shadow:0 4px 14px rgba(14,31,61,.08);margin-bottom:12px;font-weight:700;color:var(--navy);font-size:.85rem;}
 </style>
 </head>
 <body>
@@ -101,112 +80,87 @@
   <div class="brands">
     <span class="brand-chip">Prospera Seguros</span>
     <span class="brand-chip">VeSeguro</span>
-    <span class="brand-chip">GNP · Luli y Gabo</span>
   </div>
   <div class="cap">🎓✨</div>
-  <h1>Celebremos a los que <em>más queremos</em></h1>
-  <p class="lead">Queremos reconocerte a <strong>ti</strong> y a tus <strong>pequeños y no tan pequeños</strong> que se graduaron este año — desde maternal hasta la universidad. Y por supuesto, ¡recibir con cariño a toda tu <strong>familia</strong>!</p>
+  <h1>¡Felicidades! Queremos <em>celebrarte</em></h1>
+  <p class="lead">A ti, a tu equipo y a tus pequeños que terminaron la escuela. Confirma tu asistencia aquí abajo.</p>
 </header>
 
 <div class="wrap">
-  <div class="event-card">
-    <div class="event-grid">
-      <div class="ev"><div class="ico">📅</div><div><b>Fecha</b><span>Viernes 17 de julio, 2026</span></div></div>
-      <div class="ev"><div class="ico">🕙</div><div><b>Hora</b><span>10:00 am</span></div></div>
-      <div class="ev"><div class="ico">🎬</div><div><b>Lugar</b><span>Cinépolis Diana</span></div></div>
-      <div class="ev"><div class="ico">📍</div><div><b>Dirección</b><span>Av. Paseo de la Reforma 423, Col. Cuauhtémoc, CDMX</span></div></div>
-    </div>
-    <a class="cal-btn" target="_blank" rel="noopener"
-      href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+de+Reconocimiento+2026+%F0%9F%8E%93&dates=20260717T160000Z/20260717T190000Z&details=Reconocimiento+a+agentes+y+graduados.+Prospera+Seguros+%2B+VeSeguro.&location=Cin%C3%A9polis+Diana,+Av.+Paseo+de+la+Reforma+423,+Cuauht%C3%A9moc,+CDMX">
-      📆 Agregar a mi calendario
-    </a>
-  </div>
-
-  <section>
-    <h2>Un evento para reconocer</h2>
-    <p class="sub">Este día es para celebrar tu esfuerzo y el de tus graduados, rodeados de la gente que más quieres.</p>
-    <div class="rec-grid">
-      <div class="rec">
-        <div class="ico">🏆</div>
-        <div><h3>A ti, agente <span class="tag award">Recibe reconocimiento</span></h3>
-        <p>Tu esfuerzo de todo el año merece un reconocimiento formal. Recibirás tu certificado personalizado con tu nombre el día del evento.</p></div>
-      </div>
-      <div class="rec coral">
-        <div class="ico">🎓</div>
-        <div><h3>A tus graduados — con Luli y Gabo <span class="tag award">Reciben reconocimiento</span></h3>
-        <p>El certificado es para <strong>cualquier grado o año escolar que hayan terminado</strong> — no solo el fin de un nivel, sino cualquier año, de maternal a universidad. Cada graduado recibe su certificado con su nombre y con <strong>Luli y Gabo</strong>, los personajes oficiales de GNP. Conócelos en <a href="https://luliygabo.com" target="_blank" rel="noopener">luliygabo.com</a></p></div>
-      </div>
-      <div class="rec teal">
-        <div class="ico">👨‍👩‍👧‍👦</div>
-        <div><h3>A tu familia <span class="tag welcome">La recibimos con cariño</span></h3>
-        <p>Este día también es para tu familia. Los recibimos con mucho gusto para que celebren contigo — no llevan certificado, pero son parte esencial de la fiesta. Solo necesitamos saber cuántos vienen.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="park">
-      <h3>🚗 ¿Cómo llegar y dónde estacionarte?</h3>
-      <ul>
-        <li>🅿️ <span><strong>Estacionamiento del edificio</strong> (techado, dentro del mismo Cinépolis Diana) — cobra por hora/fracción y hay validación parcial con boleto.</span></li>
-        <li>🅿️ <span><strong>Corporativo Reforma Diana</strong> — pensión pública justo enfrente, en Av. Paseo de la Reforma 412.</span></li>
-        <li>🚇 <span><strong>Metro Sevilla</strong> (Línea 1) — a 10 minutos caminando.</span></li>
-        <li>🚌 <span><strong>Metrobús La Diana</strong> (Línea 7) — a unos pasos de la entrada.</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="rsvp">
-    <h2>Confirma tu asistencia</h2>
-    <p class="sub">Necesitamos tu nombre y el de cada graduado <strong>tal como quieres que aparezcan en los certificados</strong>, más el total de personas que asistirán contigo.</p>
-
-    <form class="form-card" id="rsvpForm">
-      <label>Tu nombre completo (agente) <span class="req">*</span></label>
-      <input type="text" id="agente" required placeholder="Nombre y apellidos, como irá en tu certificado">
-
-      <label>Celular (WhatsApp)</label>
-      <input type="tel" id="telefono" placeholder="55 0000 0000">
+  <section id="rsvp" style="padding-top:0">
+    <form class="card form-card" id="rsvpForm">
+      <label>Tu nombre completo <span class="req">*</span></label>
+      <input type="text" id="agente" required placeholder="Como quieres que aparezca en tu reconocimiento">
 
       <div class="row2">
         <div>
           <label>¿Asistirás? <span class="req">*</span></label>
           <select id="asistira" required>
             <option value="">Selecciona…</option>
-            <option value="si">Sí, ahí estaré 🎉</option>
-            <option value="no">No podré asistir</option>
+            <option value="si">Sí 🎉</option>
+            <option value="no">No podré</option>
           </select>
         </div>
         <div>
-          <label>Total de personas que asistirán <span class="req">*</span></label>
-          <input type="number" id="total" min="0" max="40" required placeholder="Incluyéndote a ti">
-          <div class="hint">Cuenta a todos los que vienen: tú, tu familia y tus graduados.</div>
+          <label>Personas que vienen contigo <span class="req">*</span></label>
+          <input type="number" id="total" min="0" max="40" required placeholder="Total, incluyéndote">
         </div>
       </div>
 
+      <label>Celular (WhatsApp)</label>
+      <input type="tel" id="telefono" placeholder="55 0000 0000">
+
       <fieldset>
-        <legend>🎓 Tus graduados (pequeños y no tan pequeños)</legend>
-        <div class="hint" style="margin-top:6px">El certificado es para <strong>cualquier grado o año escolar terminado</strong> — no importa si es fin de nivel o no. Agrega a cada graduado con su nombre e indícanos <strong>qué grado terminó</strong> (de maternal a universidad). Si no tienes graduados este año, deja esta sección vacía.</div>
+        <legend>🎓 Tus pequeños que terminaron la escuela</legend>
+        <div class="hint" style="margin-top:6px">Nombre y qué grado terminó (cualquier año, de maternal a universidad). Recibe su certificado con su nombre. Déjalo vacío si no aplica.</div>
         <div id="gradList"></div>
-        <button type="button" class="add" onclick="addGrad()">＋ Agregar graduado</button>
+        <button type="button" class="add" onclick="addGrad()">＋ Agregar</button>
       </fieldset>
 
-      <label>Comentarios</label>
-      <textarea id="comentarios" rows="3" placeholder="Alergias, accesibilidad, o cualquier detalle que debamos saber"></textarea>
+      <fieldset>
+        <legend>🌟 Alguien clave que quieras reconocer</legend>
+        <div class="hint" style="margin-top:6px">Nombre de quien haya sido parte importante de tu camino.</div>
+        <div id="keyList"></div>
+        <button type="button" class="add" onclick="addKey()">＋ Agregar</button>
+      </fieldset>
 
       <div class="err" id="errBox"></div>
       <button class="submit" id="submitBtn" type="submit">Confirmar asistencia ✅</button>
     </form>
 
-    <div class="success" id="successBox">
+    <div class="card success" id="successBox">
       <div class="big">🎉</div>
       <h2>¡Confirmación recibida!</h2>
-      <p>Gracias. Estamos preparando los reconocimientos para ti y tus graduados.<br>Nos vemos el <strong>viernes 17 de julio a las 10:00 am</strong> en Cinépolis Diana.</p>
+      <p>Gracias. Nos vemos el <strong>viernes 17 de julio, 10:00 am</strong> en Cinépolis Diana.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Detalles del evento</h2>
+    <div class="card">
+      <div class="ev-grid">
+        <div class="ev"><div class="ico">📅</div><div><b>Fecha</b><span>Viernes 17 de julio, 2026</span></div></div>
+        <div class="ev"><div class="ico">🕙</div><div><b>Hora</b><span>10:00 am</span></div></div>
+        <div class="ev"><div class="ico">🎬</div><div><b>Lugar</b><span>Cinépolis Diana</span></div></div>
+        <div class="ev"><div class="ico">📍</div><div><b>Dirección</b><span>Reforma 423, Cuauhtémoc, CDMX</span></div></div>
+      </div>
+      <a class="cal-btn" target="_blank" rel="noopener"
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Evento+de+Reconocimiento+2026+%F0%9F%8E%93&dates=20260717T160000Z/20260717T190000Z&location=Cin%C3%A9polis+Diana,+Av.+Paseo+de+la+Reforma+423,+Cuauht%C3%A9moc,+CDMX">📆 Agregar a mi calendario</a>
+
+      <div class="park">
+        <ul>
+          <li>🅿️ <span>Estacionamiento del edificio (techado, con validación por boleto).</span></li>
+          <li>🅿️ <span>Pensión Corporativo Reforma Diana, enfrente (Reforma 412).</span></li>
+          <li>🚇 <span>Metro Sevilla (L1), 10 min caminando.</span></li>
+          <li>🚌 <span>Metrobús La Diana (L7), a unos pasos.</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 </div>
 
 <footer>
-  <div class="luli-badge">🧒 Certificados infantiles con Luli y Gabo · <a href="https://luliygabo.com" target="_blank" rel="noopener">luliygabo.com</a></div>
+  <div class="luli-badge">🧒 Certificados infantiles con Luli y Gabo</div>
   <p>Prospera Seguros · VeSeguro · Agentes GNP<br>Evento de Reconocimiento 2026</p>
 </footer>
 
@@ -218,12 +172,19 @@ const NIVELES = ["Maternal","Kínder / Preescolar","Primaria","Secundaria","Prep
 function addGrad(){
   const d = document.createElement("div");
   d.className = "dyn-row grad";
-  d.innerHTML = `<input type="text" placeholder="Nombre completo del graduado" class="g-nombre">
+  d.innerHTML = `<input type="text" placeholder="Nombre completo" class="g-nombre">
     <select class="g-nivel"><option value="">¿Qué grado terminó?</option>${NIVELES.map(n=>`<option>${n}</option>`).join("")}</select>
     <button type="button" class="rm" onclick="this.parentNode.remove()">✕</button>`;
   document.getElementById("gradList").appendChild(d);
 }
-addGrad();
+function addKey(){
+  const d = document.createElement("div");
+  d.className = "dyn-row";
+  d.innerHTML = `<input type="text" placeholder="Nombre completo" class="k-nombre">
+    <button type="button" class="rm" onclick="this.parentNode.remove()">✕</button>`;
+  document.getElementById("keyList").appendChild(d);
+}
+addGrad(); addKey();
 
 document.getElementById("rsvpForm").addEventListener("submit", async (e)=>{
   e.preventDefault();
@@ -236,6 +197,7 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e)=>{
     nombre: r.querySelector(".g-nombre").value.trim(),
     nivel: r.querySelector(".g-nivel").value
   })).filter(g=>g.nombre);
+  const personas_clave = [...document.querySelectorAll("#keyList .k-nombre")].map(i=>i.value.trim()).filter(Boolean);
 
   const gradSinNivel = graduados.find(g=>!g.nivel);
   if(gradSinNivel){
@@ -250,8 +212,8 @@ document.getElementById("rsvpForm").addEventListener("submit", async (e)=>{
     telefono: document.getElementById("telefono").value.trim(),
     asistira: document.getElementById("asistira").value === "si",
     total_asistentes: parseInt(document.getElementById("total").value || "0", 10),
-    graduados,
-    comentarios: document.getElementById("comentarios").value.trim()
+    graduados, personas_clave,
+    comentarios: ""
   };
 
   try{
